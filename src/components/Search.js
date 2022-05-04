@@ -44,34 +44,34 @@ function Search({ details }) {
           ||
          (brewerie.county_province!=null)
          &&
-         brewerie
+         (brewerie
          .county_province
          .toLowerCase()
-         .includes(searchField.toLowerCase())
+         .includes(searchField.toLowerCase()))
          ||
          (brewerie.website_url!=null)
          &&
-         brewerie
+      (brewerie
          .website_url
          .toLowerCase()
-         .includes(searchField.toLowerCase())
+         .includes(searchField.toLowerCase()))
          ||
          brewerie
          .created_at
          .toLowerCase()
          .includes(searchField.toLowerCase())
          ||
-         brewerie
+        (brewerie
          .updated_at
          .toLowerCase()
-         .includes(searchField.toLowerCase())
+         .includes(searchField.toLowerCase()))
          ||
          (brewerie.phone!=null)
          &&
-         brewerie
+      (brewerie
          .phone
          .toLowerCase()
-         .includes(searchField.toLowerCase())
+         .includes(searchField.toLowerCase()))
       );
     }
   );
