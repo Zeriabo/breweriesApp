@@ -2,34 +2,69 @@ import React from 'react';
 import {useLocation} from 'react-router-dom';
 import AppButton from './AppButton';
 import {useNavigate} from "react-router-dom";
-
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 function CardDetails() {
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location.state)
   return(
-    <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
+    <center>
+    <Card sx={{ maxWidth: 345 }}>
+  <CardHeader
+       
+      
+        title="Showing detail about each brewery"
+  
+      />
+  
+  
+  <CardContent>
+      <Typography variant="body2" color="text.secondary">
 
-      <div>
-        <h2>Showing detail about each brewery</h2>
-        <p>name: {(location.state.brewerie.name)?location.state.brewerie.name:null}</p>
-        <p> brewerie type: {(location.state.brewerie.type)?location.state.brewerie.type:"null"}</p>
-        <p> street: {(location.state.brewerie.street?location.state.brewerie.street:"null")}</p>
-        <p>address_2: {(location.state.brewerie.address_2)?location.state.brewerie.address_2:"null"}</p>
-        <p>address_3: {(location.state.brewerie.address_3?location.state.brewerie.address_3:"null")}</p>
-        <p>city: {(location.state.brewerie.city?location.state.brewerie.city:"null")}</p>
-        <p>state: {(location.state.brewerie.state)?location.state.brewerie.state:"null"}</p>
-        <p>county_province: {(location.state.brewerie.county_province?location.state.brewerie.county_province:"null")}</p>
-        <p>postal_code: {(location.state.brewerie.postal_code)?location.state.brewerie.postal_code:"null"}</p>
-      </div>
+      <Typography variant="body2" color="text.secondary">
+        <b>Name:</b> {(location.state.brewerie.name?location.state.brewerie.name:"null")}
+        </Typography>
+      <b>brewery_type:</b> {(location.state.brewerie.brewery_type)?location.state.brewerie.brewery_type:"null"}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        <b>city:</b> {(location.state.brewerie.city?location.state.brewerie.city:"null")}
+        </Typography>
+ 
+        <Typography variant="body2" color="text.secondary">
+        <b>street:</b> {(location.state.brewerie.street?location.state.brewerie.street:"null")}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        <b>address_2:</b> {(location.state.brewerie.address_2?location.state.brewerie.address_2:"null")}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        <b>address_3:</b> {(location.state.brewerie.address_3?location.state.brewerie.address_3:"null")}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        <b>city:</b> {(location.state.brewerie.city?location.state.brewerie.city:"null")}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        <b>state:</b> {(location.state.brewerie.state?location.state.brewerie.state:"null")}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        <b>county_province:</b> {(location.state.brewerie.county_province?location.state.brewerie.county_province:"null")}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        <b>postal_code:</b> {(location.state.brewerie.postal_code?location.state.brewerie.postal_code:"null")}
+        </Typography>
+     
+      </CardContent>
+    
       <div>
     
       <AppButton shadow="true" type="info"
 border="round" size="big" onClick={() => navigate(-1)
-}>Back</AppButton>
+}>Go Back</AppButton>
       </div>
-    </div>
-  );
+    </Card>
+ </center> );
 }
 
 export default CardDetails;
