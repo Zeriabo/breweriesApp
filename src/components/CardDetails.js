@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 function CardDetails() {
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location.state)
   return(
     <center>
     <Card sx={{ maxWidth: 345 }}>
@@ -22,11 +21,12 @@ function CardDetails() {
   
   
   <CardContent>
-      <Typography variant="body2" color="text.secondary">
+  
 
       <Typography variant="body2" color="text.secondary">
         <b>Name:</b> {(location.state.brewerie.name?location.state.brewerie.name:"null")}
         </Typography>
+        <Typography variant="body2" color="text.secondary">
       <b>brewery_type:</b> {(location.state.brewerie.brewery_type)?location.state.brewerie.brewery_type:"null"}
         </Typography>
         <Typography variant="body2" color="text.secondary">

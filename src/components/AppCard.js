@@ -51,7 +51,7 @@ function AppCard({brewerie}) {
      
         <AppButton shadow="true" type="info"
 border="round" size="big" onClick={() =>  navigate('/cardDetails',{state:{brewerie:brewerie}})
-}>view cardDetails</AppButton>
+}>view card details</AppButton>
        
       </CardActions>
  
