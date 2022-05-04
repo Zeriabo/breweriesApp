@@ -7,9 +7,9 @@ function Search({ details }) {
     brewerie => {
       return (
         brewerie
-        .name
-        .toLowerCase()
-        .includes(searchField.toLowerCase())
+          .name
+          .toLowerCase()
+          .includes(searchField.toLowerCase())
       );
     }
   );
@@ -21,19 +21,19 @@ function Search({ details }) {
 
 
   return (
-    
+
     <section className="garamond">
       <div className="navy georgia ma0 grow">
         <h2 className="f2">Search your brewerie</h2>
       </div>
       <div className="pa2">
-        <TextField id="standard-basic" label="Search" variant="standard"  type = "search" 
-          placeholder = "Search filteredbreweries" 
-          onChange = {handleChange}/>
+        <TextField id="standard-basic" label="Search" variant="standard" type="search"
+          placeholder="Search filteredbreweries"
+          onChange={handleChange} />
       </div>
       <br />  <br />  <br />
-     <SearchList breweries={filteredbreweries}/>
-    
+      <SearchList breweries={filteredbreweries} />
+
     </section>
   );
 }

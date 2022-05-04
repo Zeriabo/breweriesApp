@@ -6,7 +6,7 @@ import Search from './components/Search';
 
 function App() {
 
-  const [breweries,setBreweries] = useState([]);
+  const [breweries, setBreweries] = useState([]);
 
   const fetchProducts = async () => {
     const { data } = await Axios.get(
@@ -20,12 +20,12 @@ function App() {
     fetchProducts();
   }, []);
 
-  
+
   return (
     <div>
-<Search details={breweries} />
+      <Search details={breweries} />
 
-  </div>
+    </div>
   );
 }
 

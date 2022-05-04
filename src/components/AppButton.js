@@ -20,11 +20,11 @@ function AppButton(props) {
         }
         setClasses(`${cls}`);
     }, [size, border, type, shadow]);
- 
+
     return <>
- <Button variant="contained" className={classes} {...props}></Button>
-       
+        <Button variant="contained" className={classes} {...props}></Button>
+
     </>;
 }
- 
+
 export default AppButton;

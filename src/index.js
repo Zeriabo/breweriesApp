@@ -11,10 +11,10 @@ import {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <Routes>
+    <Routes>
       <Route path="/" element={<App />} />
       <Route path="/cardDetails" element={<CardDetails />} />
- 
+
     </Routes>
   </BrowserRouter>
 );
