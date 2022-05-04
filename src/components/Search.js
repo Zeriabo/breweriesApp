@@ -31,6 +31,7 @@ function Search({ details }) {
           placeholder = "Search filteredbreweries" 
           onChange = {handleChange}/>
       </div>
+      <br />  <br />  <br />
      <SearchList breweries={filteredbreweries}/>
     
     </section>

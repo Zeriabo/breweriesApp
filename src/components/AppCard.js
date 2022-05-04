@@ -1,26 +1,63 @@
 import React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { Navigate, useNavigate } from 'react-router-dom';
+import AppButton from './AppButton';
+
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import { red } from '@mui/material/colors';
+
+
+
 function AppCard({brewerie}) {
   const navigate=useNavigate();
   
   return(
-    <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
-
-      <div>
+    <div>
+      
+   <Card sx={{ maxWidth: 345 }}>
+      <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="name">
+          {brewerie.name.charAt(0)}
+          </Avatar>
+        }
+        action={
+          <IconButton aria-label="settings">
           
-        <p>name: {brewerie.name}</p>
-        <p>breweryType: {brewerie.brewery_type}</p>
-        <p>city: {brewerie.city}</p>
-      </div>
-      <div><button onClick={()=>{
-        navigate('/cardDetails',{state:{brewerie:brewerie}})
-      }} >view cardDetails</button> </div>
+          </IconButton>
+        }
+        title={brewerie.name}
+  
+      />
+    
+      <CardContent>
+      <Typography variant="body2" color="text.secondary">
+      <b>brewery_type:</b> {brewerie.brewery_type}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        <b>city:</b> {brewerie.city}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+     
+        <AppButton shadow="true" type="info"
+border="round" size="big" onClick={() =>  navigate('/cardDetails',{state:{brewerie:brewerie}})
+}>view cardDetails</AppButton>
+       
+      </CardActions>
+ 
+    </Card>
     </div>
+  
     
   );
 }
