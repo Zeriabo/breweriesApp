@@ -18,11 +18,8 @@ function CardDetails() {
         title="Showing detail about each brewery"
   
       />
-  
-  
-  <CardContent>
-  
 
+  <CardContent>
       <Typography variant="body2" color="text.secondary">
         <b>Name:</b> {(location.state.brewerie.name?location.state.brewerie.name:"null")}
         </Typography>
