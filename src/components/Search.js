@@ -123,7 +123,7 @@ function Search({ details }) {
     setSearchField(document.getElementById("standard-basic").value);
   };
   const handleReset = e => {
-    if (document.getElementById("standard-basic").value == "")
+    if (document.getElementById("standard-basic").value === "")
       setSearchField(document.getElementById("standard-basic").value);
   };
 
