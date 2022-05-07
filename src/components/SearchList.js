@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 
 function SearchList({ breweries }) {
-
   return (
     <Container>
       <Grid container spacing={3} >
