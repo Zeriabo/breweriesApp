@@ -23,7 +23,7 @@ function CardDetails() {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  });
 
   return (
     <center>
